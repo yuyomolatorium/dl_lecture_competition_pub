@@ -1,13 +1,23 @@
-batch_size: 128
-epochs: 80
+batch_size: 1024
 lr: 0.001
+epochs: 5
+weight_decay: 0.0001
+step_size: 20
+gamma: 0.1
 
 device: cuda:0
 num_workers: 4
 seed: 1234
 use_wandb: False
 
-data_dir: data
+training:
+  
+  lr: 0.001
+  epochs: 1
+    # ここにweight_decayを追加
+  
 
+
+data_dir: data
 # Evaluation
 model_path: 
